@@ -1,0 +1,4 @@
+services:
+  employee_records.employee_service:
+    class: '\Drupal\employee_records\Services\EmployeeService'
+    arguments: ['@entity_type.manager', '@database', '@current_user']

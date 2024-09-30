@@ -1,0 +1,39 @@
+employee.collection:
+  path: '/admin/employee'
+  defaults:
+    _controller: '\Drupal\employee_records\Controller\EmployeeListBuilder::build'
+    _title: 'Employees'
+  requirements:
+    _permission: 'administer employee entities'
+
+employee.add:
+  path: '/admin/employee/add'
+  defaults:
+    _form: '\Drupal\employee_records\Form\EmployeeForm'
+    _title: 'Add Employee'
+  requirements:
+    _permission: 'administer employee entities'
+
+employee.edit:
+  path: '/admin/employee/{employee}/edit'
+  defaults:
+    _form: '\Drupal\employee_records\Form\EmployeeForm'
+    _title: 'Edit Employee'
+  requirements:
+    _permission: 'administer employee entities'
+
+employee.delete:
+  path: '/admin/employee/{employee}/delete'
+  defaults:
+    _form: '\Drupal\employee_records\Form\EmployeeDeleteForm'
+    _title: 'Delete Employee'
+  requirements:
+    _permission: 'administer employee entities'
+
+employee.view:
+  path: '/employee/{employee}'
+  defaults:
+    _controller: '\Drupal\employee_records\Controller\EmployeeController::view'
+    _title: 'View Employee'
+  requirements:
+    _permission: 'access content'

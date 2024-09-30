@@ -1,0 +1,4 @@
+administer employee entities:
+  title: 'Administer employee entities'
+  description: 'Manage employee records including adding, editing, and deleting employees'
+  restrict access: true

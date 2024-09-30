@@ -1,0 +1,9 @@
+name: 'Employee Records'
+description: 'A module to manage employee records with CRUD operations'
+package: Custom
+type: module
+core_version_requirement: ^10
+core: 10.x
+dependencies:
+  - drupal:field
+  - drupal:user
